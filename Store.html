@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apple Store</title>
+</head>
+
+<style>
+/* Styling for the body */
+body {
+  background-image: url("img/apple.jpg");
+}
+
+/* Styling for the main heading */
+h1{
+    text-align: center;
+    background-color: #270076;
+    border: outset black;
+    color: bisque;
+}
+
+/* Styling for the subheading */
+h2{
+    text-align: center;
+    color:white;
+    font-family:cursive;
+    background-size: auto;
+    background-color: rgb(44, 0, 0);
+    border-color: rgb(30, 0, 147);
+    width: 300px;
+}
+
+/* Styling for the container */
+.container{
+  display: grid;
+  grid-template-areas: 'left-column right-column';
+  width: 860px;
+  height: 430px;
+  margin: 100px auto;  
+  column-gap: 200px; 
+}
+
+/* Styling for the color selection area */
+#select{
+    background-color: #3c0000;
+    color:rgb(255, 255, 255)
+}
+#menu{
+    text-align:center;
+    background-color: #ffffff;
+    border: 5px solid;
+    border-color: #4e0000;
+    border-width: medium;
+    width: 300px;
+    height: 450px;
+}
+</style>
+
+<body>
+  <!-- Main heading -->
+<h1>Welcome to Apple Store</h1>
+<!-- Subheading for iPhone model -->
+<h2>Iphone 11</h2>
+
+<!-- Container for color selection and preview -->
+<div class="container">
+  <div id="menu">
+    <!-- Image options for different colors -->
+    <img src="img/black.jpg" alt="black colour iphone" onclick="largeImage('img/black.jpg')" width="100px">
+    <img src="img/blue.jpg" alt="blue colour iphone" onclick="largeImage('img/blue.jpg')" width="100px">
+    <img src="img/green.jpg" alt="green colour iphone" onclick="largeImage('img/green.jpg')" width="100px">
+    <img src="img/purple.jpg" alt="purple colour iphone" onclick="largeImage('img/purple.jpg')" width="100px">
+    <img src="img/red.jpg" alt="red iphone" onclick="largeImage('img/red.jpg')" width="100px">
+    <img src="img/yellow.jpg" alt="yellow iphone" onclick="largeImage('img/yellow.jpg')" width="100px"> 
+      <p id="select">Select your colour</p>  
+  </div>
+  
+  <div id="preview">
+        <!-- Enlarged image will be displayed here -->
+    <img src="" id="largedImage">
+  </div>
+</div>
+  
+<script>
+  // Function to make image large//
+    function largeImage(imageSrc) {
+      largedImage = document.getElementById('largedImage');
+      largedImage.src = imageSrc;
+      largedImage.style.width = '341px';
+      largedImage.style.height = 'auto';
+      largedImage.style.border = '2px solid blue';
+      largedImage.style.boxShadow = '0 0 10px rgba(0, 0, 255, 0.5)';
+}
+</script>
+</body>
+</html>
